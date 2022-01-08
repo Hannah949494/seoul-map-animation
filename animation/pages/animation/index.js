@@ -1,21 +1,28 @@
 import styled from "@emotion/styled";
-import Seoul from "../../public/images/seoul.svg";
+import SvgComponent from "./map";
 
 const MapWrapper = styled.div`
   width: 1000px;
   height: 500px;
 
-  svg {
-  path{
+  g {
+    .cls-1{
+      transition:.5s;
+    }
     &:hover{
-      
-      fill:black !important;
-    
-  }
-  }
-    
+      .cls-1{
+        fill:#213358;
+        filter: drop-shadow(3px 3px 2px #324e86);
+        transition:.5s;
+        cursor:pointer;
+      }
+
+      .cls-3{
+        fill:white;
+      }
     }
   }
+
 `;
 
 export default function AnimationTest() {
@@ -24,7 +31,7 @@ export default function AnimationTest() {
       <div>
         <h1>지도 애니메이션 테스트</h1>
         <MapWrapper>
-          <Seoul />
+          <SvgComponent />
         </MapWrapper>
       </div>
     </>
